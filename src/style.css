@@ -2,13 +2,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 body{
     background-color: #F3F4F2;
+    overflow-x: hidden;
 }
 
 header {
-    
+   
 padding: 35px 40px;
 }
 
@@ -20,11 +22,13 @@ padding: 35px 40px;
     width: 90%;
     margin: 0 auto;
     position: relative;
+    
 }
 
 
+
 .logo {
-   height: 40px;
+   height: 50px;
 }
 
 
@@ -36,7 +40,7 @@ padding: 35px 40px;
 }
 
 .menu li {
-   font-family: inter;
+    font-family: 'Inter', sans-serif;
     
 }
 
@@ -55,6 +59,8 @@ padding: 35px 40px;
     text-decoration: none;
     font-size: 17px;
     box-shadow: 2px 5px 4px rgba(0, 0, 0, 0.324);
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
 }
 
 .burger {
@@ -119,4 +125,87 @@ padding: 35px 40px;
     .btn {
         font-size: 14px;
     }
+}
+.image img{
+    top: 100px;
+    position: relative;
+    float:right; 
+    right: 100px;
+    height: 650px;
+}
+.image2 img{
+    top: 105px;
+    position: relative;
+    height: 100px;
+    left: 100px;
+}
+h1{
+    position: relative;
+    top: 140px;
+    font-size:45px;
+    left: 100px;
+    color: #484947;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+}
+h2{
+    font-size: 21px;
+    top: 170px;
+    position: relative;
+    left: 100px;
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
+    color: #919291;
+    
+}
+.btn1{
+    background-color: #617050;
+    color: #F3F4F2;
+    padding: 12px 18px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 17px;
+    box-shadow: 2px 5px 4px rgba(0, 0, 0, 0.324);
+    font-family: 'Inter', sans-serif;
+    position: relative;
+    top: 220px;
+    left: 100px;
+    font-weight: 300;
+}
+.btn2{
+    background-color: #CDD3C8;
+    color: #4E4E4D;
+    padding: 12px 18px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 17px;
+    box-shadow: 2px 5px 4px rgba(0, 0, 0, 0.324);
+    font-family: 'Inter', sans-serif;
+    position: relative;
+    top: 220px;
+    left: 120px;
+}
+.image3 img{
+    top: 270px;
+    position: relative;
+    left: 100px;
+}
+.image4 img{
+    top: 218px;
+    position: relative;
+    left: 140px;
+}
+.image5 img{
+    top: 167px;
+    position: relative;
+    left: 180px;
+}
+h5{
+    top: 180px;
+    position: relative;
+    left: 100px;
+    font-size:15px;
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
+    color: #4E4E4D;
 }
