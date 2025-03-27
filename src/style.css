@@ -185,22 +185,22 @@ h2{
     top: 220px;
     left: 120px;
 }
-.image3 img{
+.image3 {
     top: 270px;
     position: relative;
     left: 100px;
 }
-.image4 img{
+.image4 {
     top: 218px;
     position: relative;
     left: 140px;
 }
-.image5 img{
+.image5 {
     top: 167px;
     position: relative;
     left: 180px;
 }
-h5{
+h3{
     top: 180px;
     position: relative;
     left: 100px;
@@ -208,4 +208,126 @@ h5{
     font-weight: 500;
     font-family: 'Inter', sans-serif;
     color: #4E4E4D;
+}
+.image6{
+    top: 485px;
+    position:relative ;
+    border-bottom-left-radius:45%;
+    border-top-right-radius:45%;
+    left: 100px;
+}
+h4{
+    left: 100px;
+    position: relative;
+    font-weight: normal;
+    font-family: 'Inter', sans-serif;
+    color: #8E9D82;
+    font-size: 20px;
+}
+
+
+h5 {
+    font-size: 20px;
+    color: #484947;
+  font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    left: 930px;
+    position: relative;
+    top: 100px;
+}
+
+p {
+    font-size: 20px;
+    color: #626460;
+    margin-bottom: 20px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    left: 930px;
+    position: relative;
+    top: 100px;
+}
+h6{
+    
+    position: relative;
+    left: 755px;
+    font-size: 30px;
+    font-weight: 300;
+    color: #4E4E4D;
+
+}
+.text-blok{
+    background: #CDD3C8;
+    padding: 15px 25px ;
+    position: relative;
+    top: 380px;
+}
+.image7 img{
+    height: 500px;
+    width: 340px;
+    position: relative;
+    top: 530px;
+    border-bottom-left-radius:65%;
+    border-top-right-radius:60%;
+    border-top-left-radius:30%;
+    border-bottom-right-radius:20%;
+    left: 400px;
+}
+.info{
+    left: 850px;
+    position: relative;
+    font-size: 22px;
+    top: 200px;
+   color: #60615e;
+}
+h7, h8, h9{
+    font-size: 35px;
+bottom: 30px;
+position: relative;
+color: #484947;
+
+}
+
+.image8 img{
+    height: 400px;
+    width: 590px;
+    position: relative;
+    top: 100px;
+    border-bottom-left-radius:60%;
+    border-top-right-radius:60%;
+    border-top-left-radius:30%;
+    border-bottom-right-radius:30%;
+    left:850px;
+}
+.info2{
+    left: 25%;
+    position: relative;
+    font-size: 22px;
+    bottom: 180px;
+   color: #60615e;
+}
+.text-2-blok{
+    background: #cdd3c888;
+    padding: 15px 25px ;
+    position: relative;
+    top: 500px;
+}
+
+.image9 img{
+    height: 400px;
+    width: 590px;
+    position: relative;
+    top: 670px;
+    border-bottom-left-radius:50%;
+    border-top-right-radius:50%;
+    border-top-left-radius:10%;
+    border-bottom-right-radius:10%;
+    left:300px;
+}
+
+.info3{
+    left: 59%;
+    position: relative;
+    font-size: 22px;
+    top: 400px;
+   color: #60615e;
 }
