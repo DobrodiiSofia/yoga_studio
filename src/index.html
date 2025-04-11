@@ -7,25 +7,29 @@
     <title>yoga.studio</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-
+    <link rel="icon" href="img/icon2.png"  type="image/png">
 <body>
     <header>
         <div class="container">
             <img src="img/logo.png" class="logo">
             <nav>
                 <ul class="menu">
-                    <li><a href="#">Home</a></li>
+                    <li class="close-btn">&times;</li> 
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="courses.html">Courses</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                </ul>
+                    <li><a href="#footer">Contact Us</a></li>
+                    <li><a href="#" id="language-toggle">Uk</a></li> 
+                    </ul>
             </nav>
+           
             <a href="#" class="btn">Enroll Now</a>
         </div>
-        <div class="burger" id="burger">
+        <div class="burger" >
             <span></span>
             <span></span>
             <span></span>
         </div>
+        
     </header>
     <div class="image"> <img src="img/1.png"></div>
     <div class="image2"><img src="img/circle.png"> </div>
@@ -40,7 +44,7 @@
 
     <a href="#" class="btn1">Enroll Now</a>
 
-    <a href="#" class="btn2">Contact Us</a>
+    <a href="tel:+001 123 456 789" class="btn2">Call Now</a>
 <div class="images">
     <div class="image3"><img src="img/4.png"></div>
     <div class="image4"><img src="img/3.png"></div>
@@ -49,7 +53,7 @@
 </div>
     <h3>Trusted by 4000+ people.</h3>
 
-    <img src="img/6.jpg" class="image6">
+    <img src="img/6.jpg" class="img6">
     <h4>The atmosphere of tranquility is a cozy<br>
         space that inspires and fills with strength.</h4>
 
@@ -70,7 +74,7 @@
         <h6>Our coaches</h6>
     </div>
 
-    <div class="image7"><img src="img/8.jpeg"></div>
+    <div class="img7"><img src="img/8.jpeg"></div>
 
     <div class="info">
         <h7>Emily Johnson</h7>
@@ -85,7 +89,7 @@
     </div>
 
     <div class="text-2-blok">
-        <div class="image8"><img src="img/9.jpg"></div>
+        <div class="img8"><img src="img/9.jpg"></div>
 
         <div class="info2">
             <h8>Sophia Miller</h8>
@@ -100,7 +104,7 @@
         </div>
     </div>
 
-    <div class="image9"><img src="img/7.jpg"></div>
+    <div class="img9"><img src="img/7.jpg"></div>
 
     <div class="info3">
         <h9>Olivia Bennett</h9>
@@ -125,7 +129,7 @@
 </body>
 
 
-<footer>
+<footer   id="footer">
     <h12>Try It Free For 14 Days</h12>
     <div class="footer-bottom">
         <button>Enroll Now</button>
@@ -138,9 +142,9 @@
         <div class="logo"><img src="img/footer-logo.png">
 
             <div class="socials">
-                <a href="#"><img src="img/"></a>
-                <a href="#"><img src="img/"></a>
-                <a href="#"><img src="img/"></a>
+                <a href="https://www.facebook.com/tathyayoga/?locale=uk_UA"><img src="img/fb.png" ></a>
+                <a href="https://www.instagram.com/prostir.yoga.studio/"><img src="img/inst.png"></a>
+                <a href="https://www.youtube.com/channel/UCf0gmceDfjtmWwKVRBBrwtQ "><img src="img/youtube.png"></a>
             </div>
         </div>
 
@@ -148,12 +152,11 @@
             <h14>Courses</h14>
             <ul>
                 <br>
-                <li> <a href="#">Basics of Hatha Yoga</a></li>
-                <li> <a href="#">Ashtanga</a></li>
-                <li> <a href="#">Kundalini Yoga</a></li>
-                <li> <a href="#">Advanced practice of asanas</a></li>
-                <li> <a href="#">Yoga for pregnant women</a></li>
-                <li> <a href="#">Yoga for back and posture</a></li><br>
+                <li> <a href="courses.html#info">Basics of Hatha Yoga</a></li>
+                <li> <a href="courses.html#info2">Ashtanga</a></li>
+                <li> <a href="courses.html#info3">Kundalini Yoga</a></li>
+                <li> <a href="courses.html#info4">Advanced practice of asanas</a></li>
+                <li> <a href="courses.html#info5">Yoga for pregnant women</a></li>
             </ul>
         </div>
 
@@ -162,8 +165,8 @@
             <ul>
                 <br>
                 <li><a href="#">Home Page</a></li>
-                <li><a href="#">Contact Us</a></li>
-                <li><a href="#">Courses</a></li><br>
+                <li><a href="tel:+380660885210">Contact Us</a></li>
+                <li><a href="courses.html">Courses</a></li><br>
             </ul>
         </div>
 
@@ -171,9 +174,9 @@
             <h14>Contact Us</h14>
             <ul>
                 <br>
-                <li><a href="#"><img src="img/15.png"> +109 887 272 100</a></li>
-                <li><a href="#"><img src="img/15.png"> +001 666 454 100</a></li>
-                <li><a href="#"> <img src="img/15.png">+010 777 732 100</a></li><br>
+                <li><a href="tel:+109 887 272 100"><img src="img/15.png"> +109 887 272 100</a></li>
+                <li><a href="tel:+001 666 454 100"><img src="img/15.png"> +001 666 454 100</a></li>
+                <li><a href="tel:+010 777 732 100"> <img src="img/15.png">+010 777 732 100</a></li><br>
             </ul>
         </div>
 
@@ -184,5 +187,5 @@
     </div>
 
 </footer>
-
+<script src="main.js"></script>
 </html>

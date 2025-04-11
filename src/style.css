@@ -5,6 +5,7 @@
 
 }
 
+
 body {
     background-color: #F3F4F2;
     overflow-x: hidden;
@@ -29,29 +30,34 @@ header {
 
 
 .logo {
-    height: 3.3vw;
-    width: 14vw;
+    height: 2.5vw;
+    width: 11vw;
  }
- 
 
-.menu {
+
+ .menu {
     list-style: none;
     display: flex;
     gap: 3vw;
-
+    
 }
 
 .menu li {
     font-family: 'Inter', sans-serif;
-
+    
 }
 
 .menu a {
     text-decoration: none;
-    color: #546740;
+    color: #546740ed;
     font-size: 1vw;
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
 }
-
+.menu a:hover {
+    color: #384918; 
+    transform: scale(1.1);
+  }
 
 .btn {
     background-color: #617050;
@@ -63,18 +69,37 @@ header {
     box-shadow:  0.1vw 0.3vw 0.2vw rgba(0, 0, 0, 0.324);
     font-family: 'Inter', sans-serif;
     font-weight: 300;
+    transition: background-color 0.4s ease, color 0.4s ease, transform 0.3s ease;
 }
-
+.btn:hover, .btn1:hover{
+    background-color: #CDD3C8; 
+    color: #4E4E4D;   
+    transform: scale(1.1);         
+}
+.btn2:hover{
+    background-color: #617050; 
+    color: #F3F4F2;  
+    transform: scale(1.1);
+}
 .burger {
     display: none;
     cursor: pointer;
     flex-direction: column;
-    gap: 0.6vw;
+    gap:1.3vw;
 }
 .burger span {
-    width: 3.5vw;
-    height: 0.5vw;
-    background-color: #546740e0;
+    width: 6vw;
+    height: 0.6vw;
+    background-color: #677459cc;
+   
+    }
+    .close-btn {
+        font-size: 8vw;
+        color: #000000;
+        cursor: pointer;
+        align-self: flex-end;
+        margin: 20px;
+        display: none; 
     }
 
 .image img {
@@ -82,8 +107,7 @@ header {
     position: relative;
     float: right;
     right: 5.5vw;
-   
-    height: 41vw;
+   height: 41vw;
 }
 
 
@@ -119,29 +143,37 @@ h2 {
 
 .btn1,
 .btn2 {
-    padding:0.7vw 1.1vw;
     border-radius: 0.3vw;
     text-decoration: none;
     font-size: 1vw;
-    box-shadow:0.1vw 0.3vw 0.2vwrgba(0, 0, 0, 0.324);
+    box-shadow:  0.1vw 0.3vw 0.2vw rgba(0, 0, 0, 0.324);
     position: relative;
     top: 12.8vw;
     font-weight: 300;
     font-family: 'Inter', sans-serif;
+    transition: background-color 0.4s ease, color 0.4s ease,transform 0.3s ease;
+    display: inline-block;
 }
 
 .btn1 {
     background-color: #617050;
     color: #F3F4F2;
     left: 5.8vw;
+    padding:0.7vw 1.1vw;
 }
 
 .btn2 {
     background-color: #CDD3C8;
     color: #4E4E4D;
     left: 7vw;
+    padding:0.7vw 1.6vw;
 }
-
+.img6, .img7, .img8, .img9 {
+    transition: transform 0.4s ease;
+  transform: scale(1);
+  will-change: transform;
+  transform-origin: center center; 
+}
  
 /* Для планшетів */
 @media (max-width: 991px) {
@@ -151,6 +183,7 @@ h2 {
 }
     .menu a {
         font-size: 1.7vw;
+        line-height: 3vw;
     }
     .logo{
         height: 3.9vw;
@@ -213,7 +246,7 @@ margin-left: 3vw;
         top: 2vw !important;
     }
 
-    .image6 {
+    .img6 {
         display: flex;
         margin:0 10vw 30vw 15vw;
 
@@ -234,7 +267,7 @@ margin-left: 3vw;
     }
 
     
-    .image7 img {
+    .img7 img {
         left: auto !important;
         top: auto !important;
         margin: 30vw 25vw 10vw 25vw;
@@ -259,7 +292,7 @@ margin-left: 3vw;
        margin: 0 25vw;
     }
 
-    .image8 img {
+    .img8 img {
         left: auto !important;
         top: auto !important;
         display: flex;
@@ -280,7 +313,7 @@ margin-left: 3vw;
 
     }
 
-    .image9 img {
+    .img9 img {
         left: auto !important;
         top: auto !important;
         display: flex;
@@ -369,34 +402,56 @@ margin-left: 3vw;
         align-items: center;
         justify-content: space-between;
     }
+    .close-btn {
+    display: block;
+    color: black;
+    cursor: pointer;
+    margin: 20px;
+    font-size: 5.6vw;
+    }
 
     .logo {
-        height: 26%;
+        height: 8vw;
+        width: 35vw;
     }
 
-    .menu {
-        flex-direction: column;
-        gap: 15px;
-        width: 100%;
-        margin-top: 20px;
-        display: none;
+    .burger {
+        display: flex;
+        margin-left: 82vw;
+        }
+    
+      .menu {
+        display: flex;
+       flex-direction: column;
+       gap: 2vw;
+       position: fixed;
+       top: 0;
+       left: -100%; 
+       height: 100%;
+       background: linear-gradient(to bottom , #F3F4F2,#cdd3c8, #b3bca9);
+       width: 45vw;
+       transition: left 0.6s ease; 
+       
     }
-
-
-
-    .menu a {
-        font-size: 16px;
+    .menu.active {
+        left: 0;
+        z-index: 1;
+        
     }
-
+      .menu a {
+       color: rgb(71, 65, 65);
+       font-size: 4.4vw !important;
+       margin: 4vw;
+       }
+       .menu li{
+        line-height: 10vw;
+       }
+      
     .btn {
         padding: 10px 15px;
         font-size: 16px;
     }
 
-    .burger {
-        display: flex;
-        margin-left: 88%;
-    }
     h1 {
         font-size: 3.5vw;
         left: 0;
@@ -448,7 +503,7 @@ margin-left: 3vw;
        left: 0;
     }
 
-.image6 {
+.img6 {
         margin:6vw 8vw 5vw 15vw;
         top: auto !important;
     }
@@ -519,7 +574,7 @@ h3 {
     color: #4E4E4D;
 }
 
-.image6 {
+.img6 {
     top: 29vw;
     position: relative;
     border-bottom-left-radius: 45%;
@@ -539,7 +594,8 @@ h4 {
     font-weight: normal;
     font-family: 'Inter', sans-serif;
     color: #8E9D82;
-    font-size: 1.26vw;
+    font-size: 1.24vw;
+    bottom: 1vw;
 }
 
 
@@ -583,11 +639,11 @@ h6 {
 
 }
 
-.image7 img {
+.img7 img {
 
     width: 22vw;
     position: relative;
-    top: 30vw;
+    top: 29vw;
     border-bottom-left-radius: 65%;
     border-top-right-radius: 60%;
     border-top-left-radius: 30%;
@@ -615,7 +671,7 @@ h9 {
 
 }
 
-.image8 img {
+.img8 img {
 
     width: 30vw;
     position: relative;
@@ -652,7 +708,7 @@ h9 {
 }
 
 
-.image9 img {
+.img9 img {
     height: 23vw;
     width: 33vw;
     position: relative;
@@ -701,8 +757,8 @@ h11 {
 
 video {
     margin-top: 32vw;
-    width: 94vw;
-    left: 3vw;
+    width: 90vw;
+    left: 5vw;
     position: relative;
 }
 
@@ -722,7 +778,7 @@ footer {
     flex-wrap: wrap;
     padding: 1.8vw;
     padding-left: 16vw;
-    font-size: 1.1vw;
+    font-size: 1vw;
     font-family: 'Inter', sans-serif;
     font-weight: 200;
     }
@@ -743,47 +799,55 @@ h12,  h14 {
     font-weight: 200;
 }
 
-
-
 footer ul li {
     margin-bottom: 0.3vw;
     list-style: none;
     padding: 0;
     line-height: 2vw;
+    
 }
 
 .footer-content a {
     text-decoration: none;
-    color: #CDD3C8;
+    color: #ced1cb;
+    transition: color 0.4s ease,  transform 0.3s ease;
+    display: inline-block;
 }
+.footer-content a:hover {
+    color: white; 
+    transform: scale(1.1);
+  } 
 
-
+.socials a:hover{
+    transform: none !important;
+}
 
 div .socials{
 top: 5vw;
 position: relative;
 }
 button {
-    border: none;
+    border:#CDD3C8 solid 1px ;
     cursor: pointer;
     background-color: #CDD3C8;
     color: #484947;
     padding: 0.8vw 1.5vw;
     border-radius: 0.3vw;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 1.1vw;
     box-shadow: 0.1vw 0.3vw 0.2vw rgba(0, 0, 0, 0.324);
     font-family: 'Inter', sans-serif;
     position: relative;
     font-weight: 400;
    left: 80vw;
    bottom: 1.4vw;
+   transition: background-color 0.4s ease, color 0.4s ease, transform 0.3s ease;
 }
-
-
-
-
-
+button:hover{
+    background-color:#617050bc; 
+    color: #F3F4F2; 
+    transform: scale(1.1); 
+}
 h12{
     font-size: 2.8vw;
     color: #F3FCEC;
@@ -836,9 +900,10 @@ h16{
 .contact img{
     width: 1.6vw;
     margin: 0.5vw;
-    background-color:#d5dfd0 ;
+    background-color:#e1eadc ;
     border-radius: 2vw;
     position: relative;
+    border:#CDD3C8 solid 1px ;
 }
 .contact li{
     line-height: 0vw;
@@ -846,7 +911,16 @@ h16{
 }
 
 .socials img {
-    width: 2.3vw;
-    height: 2.3vw;
-    margin: 0.5vw;
+    width: 2.4vw;
+    height: 2.4vw;
+    margin: 0.3vw;
+    border:#CDD3C8 solid 1.6px ;
+    background-color: #dfe2dc;
+    padding: 0.3vw 0.3vw;
+    border-radius: 0.3vw;
+    transition: transform 0.3s ease;
    }
+   .socials img:hover{ 
+    transform: scale(1.1); 
+    box-shadow: 0 0.5vw 0.7vw rgba(0, 3, 0, 0.144);
+}
