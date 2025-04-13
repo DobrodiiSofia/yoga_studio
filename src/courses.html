@@ -15,7 +15,7 @@
                 <ul class="menu">
                     <li class="close-btn">&times;</li> 
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="#">Courses</a></li>
                     <li><a href="#footer">Contact Us</a></li>
                    <li><a href="#" id="language-toggle">Uk</a></li> 
                 </ul>
@@ -41,9 +41,42 @@
        themselves</li>
    </ul>
 </div>
+
+
+    <div id="checkout-modal" class="checkout-modal">
+        <div class="checkout-modal-content">
+            <span class="close-4-btn" id="close-checkout-btn">&times;</span>
+            <h8>Enroll</h8>
+            <div id="checkout-items">
+                </div>
+            <form id="registration-form">
+                <label for="name" >Name</label>
+                <input type="text" id="name" minlength="10" required>
+            
+                <label for="email" >Email</label>
+                <input type="email" id="email" minlength="10" required>
+            
+                <button id="register-btn" type="submit">Register</button>
+            </form>
+        </div>
+    </div>
+
 <div class="text-blok">
     <h6>Our courses</h6>
 </div>
+
+
+<div id="overlay" class="overlay"></div>
+    <div id="discount-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <img src="img/alert.png" alt="Free 14 days" class="modal-img">
+            <h19>Especially for you. Try any of our course for <strong> free 14 days </strong></19>
+        </div>
+    </div>
+
+
+
 
 
 <div class="imag3"><img src="img/16.jpg" id="info" ></div>
@@ -53,13 +86,11 @@
             breathing, and relaxation. Perfect<br>
             for beginners and all levels.
            </p><br>
-           <h5> Price</h5>
+           <h4> Price</h4>
            <ul>
-           <br><li>Single class - $15 </li>
-           <li>5-class pass - $65 </l8>
-           <li> Monthly - $120</li><br>
+           <br><p class="price" > Monthly - $120</p><br>
            </ul>
-           <a href="index.html" class="btn2" >Join in</a>
+           <a href="#" class="btn2">Join in</a>
    </div>
 
    <div class="imag4"><img src="img/19.jpg" id="info2" ></div>
@@ -71,11 +102,9 @@
             synchronizes breath with movement, <br>
              flexibility, and focus.
            </p><br>
-           <h5> Price</h5>
+           <h4> Price</h4>
            <ul>
-           <br><li>Group Class:  $120 for 10 sessions </li>
-           <li>Private Session: $50  </li>
-           <li> Unlimited Monthly: $99</li><br>
+          <br> <p class="price" > Monthly: $99</p><br>
            </ul>
            <a href="#" class="btn2">Join in</a>
     </div>
@@ -89,11 +118,9 @@
              and meditation to awaken inner<br>
              energy and balance the mind and body.
             </p><br>
-           <h5> Price</h5>
+           <h4> Price</h4>
            <ul>
-           <br><li>Group Class: $140 for 10 sessions</li>
-           <li>Private Session: $60 </li>
-           <li>Unlimited Monthly: $110</li><br>
+           <br> <p class="price" >Monthly: $110</p><br>
            </ul>
            <a href="#" class="btn2">Join in</a>
     </div>
@@ -108,11 +135,10 @@
             control through advanced<br>
             poses and sequences.
            </p><br>
-           <h5> Price</h5>
+           <h4> Price</h4>
            <ul>
-           <br><li>Group Class:  $150 for 10 sessions </li>
-           <li>Private Session: $60  </li>
-           <li> Unlimited Monthly: $120</li><br>
+           
+          <br> <p class="price" >Monthly: $120</p><br>
            </ul>
            <a href="#" class="btn2">Join in</a>
     </div>
@@ -127,11 +153,10 @@
             mothers to enhance well-being, relieve<br>
             discomfort, and prepare for childbirth.
             </p><br>
-           <h5> Price</h5>
+           <h4> Price</h4>
            <ul>
-           <br><li>Group Class:  $130 for 10 sessions</li>
-           <li>vPrivate Session: $55 </li>
-           <li>Unlimited Monthly: $110</li><br>
+          
+           <br><p class="price" >Monthly: $110</p><br>
            </ul>
            <a href="#" class="btn2">Join in</a>
     </div>
@@ -140,7 +165,7 @@
 <footer  id="footer">
      <h12>Try It Free For 14 Days</h12>
     <div class="footer-bottom">
-        <button>Enroll Now</button>
+        <button class="btn3" >Enroll Now</button>
         <div class="line"></div>
     </div>
    
@@ -191,6 +216,6 @@
     
     </footer>
 
-    <script src="main.js"></script>
+    <script src="courses.js"></script>
 
 </html>

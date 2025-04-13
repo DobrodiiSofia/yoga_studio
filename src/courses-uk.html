@@ -39,6 +39,26 @@
        кожен знайде ідеальну практику для себе</li>
    </ul>
 </div>
+
+
+<div id="checkout-modal" class="checkout-modal">
+    <div class="checkout-modal-content">
+        <span class="close-4-btn" id="close-checkout-btn">&times;</span>
+        <h8>Записатися</h8>
+        <div id="checkout-items">
+            </div>
+        <form id="registration-form">
+            <label for="name" >Ім'я</label>
+            <input type="text" id="name" minlength="10" required>
+        
+            <label for="email" >Пошта</label>
+            <input type="email" id="email" minlength="10" required>
+        
+            <button id="register-btn" type="submit">Реєстрація</button>
+        </form>
+    </div>
+</div>
+
 <div class="text-blok">
     <h6>Наші курси</h6>
 </div>
@@ -52,9 +72,7 @@
            </p><br>
            <h5> Ціна</h5>
            <ul>
-           <br><li>Один урок - $15 </li>
-           <li>Абонемент на 5 занять - $65 </l8>
-           <li>Щомісячний абонемент - $120</li><br>
+            <br> <p class="price" >Щомісяця: $120</p><br>
            </ul>
            <a href="#" class="btn2">Записатись</a>
     </div>
@@ -70,9 +88,7 @@
            </p><br>
            <h5> Ціна</h5>
            <ul>
-           <br><li>Груповий клас:  $120 за 10 занять </li>
-           <li>Індивідуальне заняття: $50  </li>
-           <li>Безлімітний абонемент: $99</li><br>
+            <br> <p class="price" >Щомісяця: $99</p><br>
            </ul>
            <a href="#" class="btn2">Записатись</a>
     </div>
@@ -88,9 +104,7 @@
             </p><br>
            <h5> Ціна</h5>
            <ul>
-           <br><li>Груповий клас: $140 за 10 занять</li>
-           <li>Індивідуальне заняття: $60 </li>
-           <li>Безлімітний абонемент: $110</li><br>
+            <br> <p class="price" >Щомісяця: $110</p><br>
            </ul>
            <a href="#" class="btn2">Записатись</a>
     </div>
@@ -106,10 +120,7 @@
            </p><br>
            <h5> Ціна</h5>
            <ul>
-           <br><li>Груповий клас:  $150 за 10 занять </li>
-           <li>Індивідуальне заняття: $60  </li>
-           <li>Безлімітний абонемент: $120</li><br>
-           </ul>
+            <br> <p class="price" >Щомісяця: $120</p><br>
            <a href="#" class="btn2">Записатись</a>
     </div>
     </div>
@@ -123,9 +134,7 @@
             </p><br>
            <h5> Ціна</h5>
            <ul>
-           <br><li>Груповий клас:  $130 за 10 занять</li>
-           <li>Індивідуальне заняття: $55 </li>
-           <li>Безлімітний абонемент: $110</li><br>
+            <br> <p class="price" >Щомісяця: $120</p><br>
            </ul>
            <a href="#" class="btn2">Записатись</a>
     </div>
@@ -135,7 +144,7 @@
 <footer  id="footer">
      <h12>Спробуйте безкоштовно протягом 14 днів</h12>
     <div class="footer-bottom">
-        <button>Записатись </button>
+        <button class="btn3" >Записатись </button>
         <div class="line"></div>
     </div>
    
@@ -186,6 +195,6 @@
     
     </footer>
 
-    <script src="main.js"></script>
+    <script src="courses.js"></script>
 
 </html>

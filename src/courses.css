@@ -316,10 +316,9 @@ left: 15vw;
         left: 66vw !important;
     }
 
-    h5{
+    h5, h4{
         font-size: 3vw !important;
     }
-
     .btn2{
         font-size: 2.5vw !important;
     }
@@ -401,22 +400,19 @@ h6{
     left: 54vw;
     position: relative;
     font-size: 1.4vw;
-    top: 14.5vw;
+    top: 16vw;
    color: #60615e;
    font-weight: 200;
    font-family: 'Inter', sans-serif;
 }
-h5{
-    font-size: 1.8vw;
+h5, h4{
+    font-size: 1.6vw;
     font-family: 'Inter', sans-serif;
    position: relative;
    font-weight: 400;
 }
-.info li,.info2 li, .info3 li,.info4 li,.info5 li,.info6 li{
-    left: 1.2vw;
-    position: relative;
-    
-}
+
+
 .btn2{
     background-color: #617050;
     color: #F3F4F2;
@@ -438,7 +434,7 @@ h5{
 .imag4 img{
     height: 30vw;
     position: relative;
-    top: 28vw;
+    top: 30vw;
     border-bottom-left-radius:7%;
     border-top-right-radius:20%;
     border-top-left-radius:7%;
@@ -460,13 +456,13 @@ h5{
     background: linear-gradient(to bottom, #b3bca9e4,#cdd3c835, #F3F4F2);
     padding: 8vw 3vw ;
     position: relative;
-   bottom: 4.5vw;
+   bottom: 2vw;
       
 }
 .imag5 img{
     height: 20vw;
     position: relative;
-    top: 10vw;
+    top: 12vw;
     border-bottom-left-radius:20%;
     border-top-right-radius:7%;
     border-top-left-radius:20%;
@@ -477,7 +473,7 @@ h5{
     left: 55vw;
     position: relative;
     font-size: 1.4vw;
-    bottom: 12vw;
+    bottom: 8vw;
    color: #60615e;
    font-weight: 200;
    font-family: 'Inter', sans-serif;
@@ -486,7 +482,7 @@ h5{
 .imag6 img{
     height: 22vw;
     position: relative;
-    top: 8.2vw;
+    top: 9.3vw;
     border-bottom-left-radius:7%;
     border-top-right-radius:20%;
     border-top-left-radius:7%;
@@ -507,12 +503,12 @@ h5{
     background: linear-gradient(to bottom, #F3F4F2,#cdd3c835, #b3bca9e4);
     padding: 8vw 3vw ;
     position: relative;
-   bottom: 22vw;
+   bottom: 20vw;
 }
 .imag7 img{
     height: 22vw;
     position: relative;
-    bottom: 9.2vw;
+    bottom: 8vw;
     border-bottom-left-radius:20%;
     border-top-right-radius:7%;
     border-top-left-radius:20%;
@@ -525,7 +521,7 @@ h5{
     left: 56vw;
     position: relative;
     font-size: 1.4vw;
-    bottom: 32vw;
+    bottom: 29vw;
    color: #60615e;
    font-weight: 200;
    font-family: 'Inter', sans-serif;
@@ -557,7 +553,7 @@ footer {
 }
 
 
-h12,  h14 {
+  h14 {
     margin-bottom: 0.6vw;
     color: #fffffff6;
     font-family: 'Inter', sans-serif;
@@ -590,7 +586,7 @@ div .socials{
 top: 5vw;
 position: relative;
 }
-button {
+.btn3 {
     border:#CDD3C8 solid 1px ;
     cursor: pointer;
     background-color: #CDD3C8;
@@ -607,7 +603,7 @@ button {
    bottom: 1.4vw;
    transition: background-color 0.4s ease, color 0.4s ease, transform 0.3s ease;
 }
-button:hover{
+.btn3:hover{
     background-color:#617050bc; 
     color: #F3F4F2; 
     transform: scale(1.1); 
@@ -719,4 +715,213 @@ h16{
    .socials img:hover{ 
     transform: scale(1.1); 
     box-shadow: 0 0.5vw 0.7vw rgba(0, 3, 0, 0.144);
+}
+.modal {
+    display: none;
+    position: fixed;
+    top: 18vw;
+    left: 40vw;
+    right: 25vw;
+    transform: translate(-50%, -50%);
+    width: 20vw;
+    background: linear-gradient(to bottom, #567fa0,#daded6, #f6f9f4);
+    padding: 0.6vw;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 0.5vw;
+    text-align: center;
+    opacity: 0;
+    animation: fadeInUp 0.6s ease-out forwards;
+    z-index: 1000;
+  }
+  
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+  }
+  
+  .modal-content {
+    position: relative;
+  }
+  
+  .close-modal {
+    position: absolute;
+    right: 0.6vw;
+    font-size: 1.3vw;
+    cursor: pointer;
+    z-index: 1001;
+    
+  }
+   .modal-img {
+    width: 18.2vw;
+    height: 13vw;
+    border-radius: 0.5vw;
+    margin-bottom: 0.5vw;
+    user-select: none;
+    pointer-events: none; 
+  }
+  .overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 999; 
+    display: none;
+}
+.cart-image {
+    width: 20vw; 
+    height: auto; 
+   border-radius: 1vw;
+  }
+
+
+/* Стилі для затемнення фону */
+.checkout-modal {
+    display:  none; 
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.465);
+    backdrop-filter: blur(8px);
+    z-index: 1003;
+     transform: translateY(100%);
+     transition: transform 0.5s ease-in-out;
+   
+  }
+.checkout-modal.active {
+    transform: translateY(0);
+  }
+  
+  /* Вміст модального вікна */
+  .checkout-modal-content {
+    background: linear-gradient(135deg, #808f6fb4, rgba(239, 247, 242, 0.652));
+    border-radius: 30vw;
+    width: 70vw;
+    max-width: 50vw; 
+    padding: 7vw;  
+    padding-left: 12vw;
+    padding-right: 12vw;
+    box-shadow: 0 2vw 4vw rgba(0, 0, 0, 0.2);
+    text-align: center;
+    color: rgb(242, 241, 245);
+    font-family: 'Inter', sans-serif;
+  }
+ 
+  
+  .checkout-modal-content h8 {
+    margin-bottom: 2.6vw;
+    font-size: 2vw;
+    font-weight: 600;
+  }
+ 
+  #registration-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.3vw;
+    
+  }
+  
+  #registration-form label {
+    text-align: left;
+    font-size: 1vw;
+    font-weight: 300;
+   
+  }
+  
+  #registration-form input {
+    padding: 0.8vw;
+    border: none;
+    border-radius: 7px;
+    background-color: rgba(255, 255, 255, 0.492);
+    font-size: 1vw;
+    outline: none;
+    
+  }
+
+  #registration-form 
+   #register-btn {
+    border: none;
+    background: rgba(66, 88, 67, 0.717);
+    color: #dee7df;
+    padding: 0.7vw ;
+    border-radius: 8px;
+    font-size: 1.1vw;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.4s ease;
+  }
+  
+  #register-btn:hover {
+    background: #182f18;
+  }
+  
+  .close-4-btn {
+    position: absolute;
+    top: 1vw;
+    right: 2vw;
+    font-size: 2vw;
+    color: white;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 600px) {
+    .checkout-modal-content h8 {
+      font-size: 4vw;
+    }
+  
+    #registration-form label, #registration-form input, #register-btn {
+      font-size: 3vw;
+    }
+  
+    #register-btn {
+      padding: 3vw;
+    }
+  
+    .close-4-btn {
+      font-size: 5vw;
+    }
+    .checkout-modal-content {
+       
+        width: 60vw;
+        border-radius: 10vw;
+        padding: 7vw;  
+        
+      }
+     
+  }
+
+     
+  
+  h17{
+    font-size: 1.2vw;
+    
+    font-weight: 300;
+  }
+
+  #checkout-modal.slide-out {
+    animation: slideOut 0.5s ease-in-out forwards;
+  }
+  
+  @keyframes slideOut {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(100%);
+    }
+  }
+
+  h19{
+    font-size: 1.2vw;
+    font-family: 'Inter', sans-serif;
 }

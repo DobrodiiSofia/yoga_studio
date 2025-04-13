@@ -1,51 +1,6 @@
-/* Бургер меню */
-let burger = document.querySelector('.burger');
-let menu = document.querySelector('.menu');
-let closeBtn = document.querySelector('.close-btn');
-
-burger.addEventListener('click', () => {
-    menu.classList.toggle('active'); 
-});
-
-burger.addEventListener('click', () => {
-    menu.classList.add('active');
-});
-
-closeBtn.addEventListener('click', () => {
-    menu.classList.remove('active');
-});
-/* Аімація картинок */
-window.addEventListener('scroll', () => {
-    const images = document.querySelectorAll('[class*="img"]');
-    const centerY = window.innerHeight / 2;
-    let closestImg = null;
-    let closestDistance = Infinity;
-  
-    images.forEach(img => {
-      const rect = img.getBoundingClientRect();
-      const imgCenterY = rect.top + rect.height / 2;
-     const isVisible = rect.bottom > 0 && rect.top < window.innerHeight;
-
-      if (isVisible) {
-        const distance = Math.abs(centerY - imgCenterY);
-        if (distance < closestDistance) {
-          closestDistance = distance;
-          closestImg = img;
-        }
-      }
-    });
-  
-    images.forEach(img => {
-      if (img === closestImg) {
-        img.style.transform = 'scale(1.1)';
-      } else {
-        img.style.transform = 'scale(1)';
-      }
-    });
-  });
 
 /* Зміна мов */
-  document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
     const langBtn = document.getElementById('language-toggle');
   
     if (langBtn) {
@@ -88,101 +43,137 @@ window.addEventListener('scroll', () => {
 });
 
 
+/* Бургер меню */
+let burger = document.querySelector('.burger');
+let menu = document.querySelector('.menu');
+let closeBtn = document.querySelector('.close-btn');
 
+burger.addEventListener('click', () => {
+    menu.classList.toggle('active'); 
+});
 
-let cart = []; 
+burger.addEventListener('click', () => {
+    menu.classList.add('active');
+});
 
-/* Обробка кнопки Enroll Now (у шапці) */
+closeBtn.addEventListener('click', () => {
+    menu.classList.remove('active');
+});
+
+/* Реєстрація */
+let cart = [];
+
 document.querySelector('.btn').addEventListener('click', function(e) {
   e.preventDefault();
-  openCheckoutModal();
+  openCheckoutModal('enroll');
 });
 
-// Обробка кнопки Enroll Now (у футері)
 document.querySelector('.btn3').addEventListener('click', function(e) {
   e.preventDefault();
-  openCheckoutModal();
+  openCheckoutModal('enroll');
 });
 
-
-document.querySelector('.btn1').addEventListener('click', function(e) {
-  e.preventDefault();
-  openCheckoutModal();
+const joinButtons = document.querySelectorAll('.btn2');
+joinButtons.forEach(button => {
+  button.addEventListener('click', function(e) {
+    e.preventDefault();
+    const courseInfo = getCourseInfo(e.currentTarget);
+    openCheckoutModal('join', courseInfo);
+  });
 });
 
-// Функція для відкриття модального вікна оформлення замовлення
-function openCheckoutModal() {
-  
-  const existingItem = cart.find(item => item.name === "Free for 14 days");
-  if (!existingItem) {
-    cart.push({
-      name: "Free for 14 days",
-      imgSrc: "img/enroll.png", 
-    });
-  }
+function getCourseInfo(button) {
+  const infoBlock = button.closest('.info, .info2, .info3, .info4, .info5');
+  if (!infoBlock) return null;
 
+  const courseName = infoBlock.querySelector('h5')?.textContent.trim();
+
+ 
+let container = infoBlock.closest('.text-2-blok, .text-3-blok') || infoBlock;
+
+
+let imageBlock = container.previousElementSibling;
+while (imageBlock && !imageBlock.querySelector('img')) {
+  imageBlock = imageBlock.previousElementSibling;
+}
+
+const courseImg = imageBlock?.querySelector('img')?.src;
+
+  const priceText = infoBlock.querySelector('.price')?.textContent.trim();
+
+  if (!courseName || !courseImg || !priceText) return null;
+
+  return {
+    name: courseName,
+    imgSrc: courseImg,
+    price: priceText
+  };
+}
+
+function openCheckoutModal(type, course) {
   const checkoutModal = document.getElementById('checkout-modal');
   if (checkoutModal) {
     checkoutModal.style.display = 'flex';
-   
     setTimeout(() => {
       checkoutModal.classList.add('active');
     }, 10);
-    updateCheckoutItems();
+    updateCheckoutItems(type, course);
   }
 }
 
-// Оновлення списку товарів при оформленні замовлення
-function updateCheckoutItems() {
+function updateCheckoutItems(type, course) {
   const checkoutItemsContainer = document.getElementById('checkout-items');
-  if (checkoutItemsContainer) {
-   
-    checkoutItemsContainer.innerHTML = '';
+  if (!checkoutItemsContainer) return;
 
-    cart.forEach(item => {
-      const itemDiv = document.createElement('div');
-      itemDiv.classList.add('checkout-item');
-      itemDiv.innerHTML = `
-        <img src="${item.imgSrc}" alt="${item.name}" class="cart-image">
-        <div class="checkout-item-details">
-          <h17>${item.name}</h17>
-        </div>
-      `;
-      checkoutItemsContainer.appendChild(itemDiv);
-    });
+  checkoutItemsContainer.innerHTML = '';
+
+  if (type === 'enroll') {
+    const itemDiv = document.createElement('div');
+    itemDiv.classList.add('checkout-item');
+    itemDiv.innerHTML = `
+      <img src="img/enroll.png" alt="Free for 14 days" class="cart-image">
+      <div class="checkout-item-details">
+        <h3>Free for 14 days</h3>
+      </div>
+    `;
+    checkoutItemsContainer.appendChild(itemDiv);
+  } else if (type === 'join' && course) {
+    const itemDiv = document.createElement('div');
+    itemDiv.classList.add('checkout-item');
+    itemDiv.innerHTML = `
+      <img src="${course.imgSrc}" alt="${course.name}" class="cart-image">
+      <div class="checkout-item-details">
+        <h3>${course.name}</h3>
+        <p>${course.price}</p>
+      </div>
+    `;
+    checkoutItemsContainer.appendChild(itemDiv);
   }
 }
 
-// Закриття вікна оформлення замовлення
 document.getElementById('close-checkout-btn').addEventListener('click', function() {
   const checkoutModal = document.getElementById('checkout-modal');
   if (checkoutModal) {
-    // Видаляємо клас для анімації зникнення
     checkoutModal.classList.remove('active');
-    // Додаємо клас для анімації зсування вниз
     checkoutModal.classList.add('slide-out');
     setTimeout(() => {
       checkoutModal.style.display = 'none';
-      // Видаляємо клас після зникнення
       checkoutModal.classList.remove('slide-out');
     }, 500);
   }
 });
 
-// Очищення кошика після успішного замовлення
 document.getElementById('registration-form').addEventListener('submit', function(event) {
   event.preventDefault();
 
   const name = document.getElementById('name').value;
   const email = document.getElementById('email').value;
 
-  // Перевірка на заповненість полів
   if (!name || !email) {
     alert("Будь ласка, заповніть всі поля.");
     return;
   }
 
-  // Перевірка довжини імені
   if (name.length < 10) {
     alert("Будь ласка, введіть повне ім'я (мінімум 10 символів).");
     return;
@@ -190,18 +181,14 @@ document.getElementById('registration-form').addEventListener('submit', function
 
   alert("Дякуємо за ваш запис. Ми зв'яжемося з вами найближчим часом.");
 
-  // Очищення кошика
   cart = [];
-  // Оновлення відображення кошика (якщо у вас є функція updateCart())
   if (typeof updateCart === 'function') {
     updateCart();
   }
 
-  // Очищення полів введення
   document.getElementById('name').value = '';
   document.getElementById('email').value = '';
 
-  // Закриття модального вікна
   const checkoutModal = document.getElementById('checkout-modal');
   if (checkoutModal) {
     checkoutModal.classList.remove('active');
@@ -212,5 +199,3 @@ document.getElementById('registration-form').addEventListener('submit', function
     }, 500);
   }
 });
-
-
