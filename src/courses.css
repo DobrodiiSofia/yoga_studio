@@ -230,10 +230,36 @@ html {
             font-size: 2.4vw !important;
            left: 28vw !important;
         }
+
+        #registration-form label, #registration-form input {
+            font-size: 1.8vw !important;
+          }
+           
+        .cart-image {
+            width: 25vw !important; 
+            height: auto; 
+           border-radius: 1vw;
+          }
+
+          .modal {
+            top:34vw !important;
+            left: 4vw;
+            right: 25vw;
+          }
+          .close-modal {
+             font-size: 2.2vw !important;
+           }
+           h19{
+            font-size: 1.8vw !important;
+           }
     }
 
     /* Мобільні пристрої */
  @media (max-width: 768px){
+
+    #registration-form label, #registration-form input {
+        font-size: 3vw !important;
+      }
     .logo {
         height: 8vw;
         width: 35vw;
@@ -716,64 +742,7 @@ h16{
     transform: scale(1.1); 
     box-shadow: 0 0.5vw 0.7vw rgba(0, 3, 0, 0.144);
 }
-.modal {
-    display: none;
-    position: fixed;
-    top: 18vw;
-    left: 40vw;
-    right: 25vw;
-    transform: translate(-50%, -50%);
-    width: 20vw;
-    background: linear-gradient(to bottom, #567fa0,#daded6, #f6f9f4);
-    padding: 0.6vw;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    border-radius: 0.5vw;
-    text-align: center;
-    opacity: 0;
-    animation: fadeInUp 0.6s ease-out forwards;
-    z-index: 1000;
-  }
-  
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-  }
-  
-  .modal-content {
-    position: relative;
-  }
-  
-  .close-modal {
-    position: absolute;
-    right: 0.6vw;
-    font-size: 1.3vw;
-    cursor: pointer;
-    z-index: 1001;
-    
-  }
-   .modal-img {
-    width: 18.2vw;
-    height: 13vw;
-    border-radius: 0.5vw;
-    margin-bottom: 0.5vw;
-    user-select: none;
-    pointer-events: none; 
-  }
-  .overlay {
-    position: fixed;
-    top: 0; left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5); 
-    z-index: 999; 
-    display: none;
-}
+
 .cart-image {
     width: 20vw; 
     height: auto; 
@@ -891,22 +860,11 @@ h16{
       font-size: 5vw;
     }
     .checkout-modal-content {
-       
-        width: 60vw;
+       width: 60vw;
         border-radius: 10vw;
         padding: 7vw;  
-        
-      }
-     
-  }
-
-     
-  
-  h17{
-    font-size: 1.2vw;
-    
-    font-weight: 300;
-  }
+         }
+     }
 
   #checkout-modal.slide-out {
     animation: slideOut 0.5s ease-in-out forwards;
@@ -925,3 +883,48 @@ h16{
     font-size: 1.2vw;
     font-family: 'Inter', sans-serif;
 }
+
+#preloader {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: #dde0db;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    transition: opacity 1s ease;
+  }
+  
+  .fade-out {
+    animation: fadeOut 1s ease forwards;
+  }
+  
+  .logo-2 {
+    width: 150px;
+    height: auto;
+    animation: breathe 4s ease-in-out infinite;
+  }
+  
+  @keyframes breathe {
+    0% {
+      transform: scale(1.5);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.3);
+      opacity: 0.95;
+    }
+    100% {
+      transform: scale(1.5);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeOut {
+    to {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }

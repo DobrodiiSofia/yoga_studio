@@ -79,7 +79,7 @@ window.addEventListener('scroll', () => {
 
         modal.style.display = "block";
         overlay.style.display = "block";
-    }, 2000); 
+    }, 6600); 
 
     document.querySelector(".close-modal").addEventListener("click", function () {
         document.getElementById("discount-modal").style.display = "none";
@@ -213,4 +213,16 @@ document.getElementById('registration-form').addEventListener('submit', function
   }
 });
 
+window.addEventListener('load', () => {
+  const preloader = document.getElementById('preloader');
+  const content = document.getElementById('content');
+  setTimeout(() => {
+    preloader.classList.add('fade-out');
 
+    preloader.addEventListener('animationend', () => {
+      preloader.style.display = 'none';
+      content.style.display = 'block';
+      document.body.style.overflow = 'auto';
+    });
+  }, 2700); 
+});
