@@ -92,13 +92,12 @@ window.addEventListener('scroll', () => {
 
 let cart = []; 
 
-/* Обробка кнопки Enroll Now (у шапці) */
+
 document.querySelector('.btn').addEventListener('click', function(e) {
   e.preventDefault();
   openCheckoutModal();
 });
 
-// Обробка кнопки Enroll Now (у футері)
 document.querySelector('.btn3').addEventListener('click', function(e) {
   e.preventDefault();
   openCheckoutModal();
@@ -110,7 +109,7 @@ document.querySelector('.btn1').addEventListener('click', function(e) {
   openCheckoutModal();
 });
 
-// Функція для відкриття модального вікна оформлення замовлення
+
 function openCheckoutModal() {
   
   const existingItem = cart.find(item => item.name === "Free for 14 days");
@@ -157,32 +156,30 @@ function updateCheckoutItems() {
 document.getElementById('close-checkout-btn').addEventListener('click', function() {
   const checkoutModal = document.getElementById('checkout-modal');
   if (checkoutModal) {
-    // Видаляємо клас для анімації зникнення
+   
     checkoutModal.classList.remove('active');
-    // Додаємо клас для анімації зсування вниз
+   
     checkoutModal.classList.add('slide-out');
     setTimeout(() => {
       checkoutModal.style.display = 'none';
-      // Видаляємо клас після зникнення
+     
       checkoutModal.classList.remove('slide-out');
     }, 500);
   }
 });
 
-// Очищення кошика після успішного замовлення
 document.getElementById('registration-form').addEventListener('submit', function(event) {
   event.preventDefault();
 
   const name = document.getElementById('name').value;
   const email = document.getElementById('email').value;
 
-  // Перевірка на заповненість полів
+ 
   if (!name || !email) {
     alert("Будь ласка, заповніть всі поля.");
     return;
   }
 
-  // Перевірка довжини імені
   if (name.length < 10) {
     alert("Будь ласка, введіть повне ім'я (мінімум 10 символів).");
     return;
@@ -190,18 +187,15 @@ document.getElementById('registration-form').addEventListener('submit', function
 
   alert("Дякуємо за ваш запис. Ми зв'яжемося з вами найближчим часом.");
 
-  // Очищення кошика
   cart = [];
-  // Оновлення відображення кошика (якщо у вас є функція updateCart())
   if (typeof updateCart === 'function') {
     updateCart();
   }
 
-  // Очищення полів введення
   document.getElementById('name').value = '';
   document.getElementById('email').value = '';
 
-  // Закриття модального вікна
+ 
   const checkoutModal = document.getElementById('checkout-modal');
   if (checkoutModal) {
     checkoutModal.classList.remove('active');
